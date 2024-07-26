@@ -31,7 +31,7 @@
         {
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "gridPos": {
                 "h": 1,
@@ -44,7 +44,7 @@
                 {
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "influxdb_uid"
                     },
                     "refId": "A"
                 }
@@ -160,7 +160,7 @@
                     "measurement": "cpu",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"customer\" = 'OpenWebinars' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -183,12 +183,6 @@
                             "key": "host",
                             "operator": "=",
                             "value": "docker-telegraf-second"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "OpenWebinars"
                         },
                         {
                             "condition": "AND",
@@ -315,7 +309,7 @@
                     "measurement": "cpu",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"customer\" = 'OpenWebinars' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -338,12 +332,6 @@
                             "key": "host",
                             "operator": "=",
                             "value": "docker-telegraf-second"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "OpenWebinars"
                         },
                         {
                             "condition": "AND",
@@ -470,7 +458,7 @@
                     "measurement": "disk",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"customer\" = 'OpenWebinars' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -493,12 +481,6 @@
                             "key": "host",
                             "operator": "=",
                             "value": "docker-telegraf-second"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "OpenWebinars"
                         },
                         {
                             "condition": "AND",
@@ -556,7 +538,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "description": "",
             "fieldConfig": {
@@ -664,7 +646,7 @@
                     "measurement": "cpu",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"customer\" = 'OpenWebinars' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -687,13 +669,7 @@
                             "key": "host",
                             "operator": "=",
                             "value": "docker-telegraf"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "OpenWebinars"
-                        },
+                        },                        
                         {
                             "condition": "AND",
                             "key": "os",
@@ -854,7 +830,7 @@
                     "measurement": "cpu",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"customer\" = 'OpenWebinars' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -877,12 +853,6 @@
                             "key": "host",
                             "operator": "=",
                             "value": "docker-telegraf"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "OpenWebinars"
                         },
                         {
                             "condition": "AND",
@@ -1044,7 +1014,7 @@
                     "measurement": "disk",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"customer\" = 'OpenWebinars' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
+                    "query": "SELECT mean(\"usage_guest\") FROM \"cpu\" WHERE (\"host\" = 'docker-telegraf' AND \"os\" = 'Linux' AND \"environment\" = 'Dev') AND $timeFilter GROUP BY time($__interval) fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1070,12 +1040,6 @@
                         },
                         {
                             "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "OpenWebinars"
-                        },
-                        {
-                            "condition": "AND",
                             "key": "os",
                             "operator": "=",
                             "value": "Linux"
@@ -1095,7 +1059,7 @@
         {
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "gridPos": {
                 "h": 1,
@@ -1108,7 +1072,7 @@
                 {
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "influxdb_uid"
                     },
                     "refId": "A"
                 }
@@ -1358,7 +1322,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "description": "",
             "fieldConfig": {
@@ -1464,7 +1428,7 @@
                     "measurement": "mem",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"Available_Bytes\") FROM \"win_mem\" WHERE (\"customer\" = 'OpenWebinars') AND $timeFilter GROUP BY time($__interval), \"host\" fill(linear)",
+                    "query": "SELECT mean(\"Available_Bytes\") FROM \"win_mem\" WHERE ($timeFilter GROUP BY time($__interval), \"host\" fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1546,7 +1510,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "description": "",
             "fieldConfig": {
@@ -1702,7 +1666,7 @@
                     "alias": "$tag_host",
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "influxdb_uid"
                     },
                     "groupBy": [
                         {
@@ -1769,7 +1733,7 @@
         {
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "gridPos": {
                 "h": 1,
@@ -1782,7 +1746,7 @@
                 {
                     "datasource": {
                         "type": "influxdb",
-                        "uid": "ddsr98u88mygwb"
+                        "uid": "influxdb_uid"
                     },
                     "refId": "A"
                 }
@@ -1828,7 +1792,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "description": "",
             "fieldConfig": {
@@ -1962,7 +1926,7 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "devopsea-dev"
+                            "value": "mundose-dev"
                         },
                         {
                             "condition": "AND",
@@ -2020,7 +1984,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "description": "",
             "fieldConfig": {
@@ -2122,7 +2086,7 @@
                     "measurement": "win_mem",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT mean(\"Available_Bytes\") FROM \"win_mem\" WHERE (\"customer\" = 'OpenWebinars') AND $timeFilter GROUP BY time($__interval), \"host\" fill(linear)",
+                    "query": "SELECT mean(\"Available_Bytes\") FROM \"win_mem\" WHERE ($timeFilter GROUP BY time($__interval), \"host\" fill(linear)",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -2140,7 +2104,7 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "devopsea-dev"
+                            "value": "mundose-dev"
                         },
                         {
                             "condition": "AND",
@@ -2198,7 +2162,7 @@
             },
             "datasource": {
                 "type": "influxdb",
-                "uid": "ddsr98u88mygwb"
+                "uid": "influxdb_uid"
             },
             "description": "",
             "fieldConfig": {
@@ -2332,7 +2296,7 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "devopsea-dev"
+                            "value": "mundose-dev"
                         },
                         {
                             "condition": "AND",
@@ -2364,7 +2328,7 @@
     },
     "timepicker": {},
     "timezone": "",
-    "title": "First dashboard",
+    "title": "MundosE",
     "uid": "0D88mZa7k",
     "version": 20,
     "weekStart": ""
