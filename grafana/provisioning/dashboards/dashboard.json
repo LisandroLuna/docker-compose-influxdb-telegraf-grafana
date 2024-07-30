@@ -1258,13 +1258,7 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "WSL-debian"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "local-debian"
                         },
                         {
                             "condition": "AND",
@@ -1446,13 +1440,7 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "WSL-debian"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "local-debian"
                         },
                         {
                             "condition": "AND",
@@ -1469,7 +1457,7 @@
                     ]
                 }
             ],
-            "title": "Memory",
+            "title": "Memory Free",
             "type": "timeseries"
         },
         {
@@ -1616,7 +1604,7 @@
                     "measurement": "disk",
                     "orderByTime": "ASC",
                     "policy": "default",
-                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'WSL-debian' AND \"customer\" = 'DevOpsea' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/mnt/c') AND $timeFilter GROUP BY \"host\"::tag",
+                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'local-debian' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/') AND $timeFilter GROUP BY \"host\"::tag",
                     "rawQuery": false,
                     "refId": "A",
                     "resultFormat": "time_series",
@@ -1634,13 +1622,7 @@
                         {
                             "key": "host",
                             "operator": "=",
-                            "value": "WSL-debian"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "DevOpsea"
+                            "value": "local-debian"
                         },
                         {
                             "condition": "AND",
@@ -1658,76 +1640,12 @@
                             "condition": "AND",
                             "key": "path",
                             "operator": "=",
-                            "value": "/mnt/c"
-                        }
-                    ]
-                },
-                {
-                    "alias": "$tag_host",
-                    "datasource": {
-                        "type": "influxdb",
-                        "uid": "influxdb_uid"
-                    },
-                    "groupBy": [
-                        {
-                            "params": [
-                                "host::tag"
-                            ],
-                            "type": "tag"
-                        }
-                    ],
-                    "hide": false,
-                    "measurement": "disk",
-                    "orderByTime": "ASC",
-                    "policy": "default",
-                    "query": "SELECT \"free\" FROM \"disk\" WHERE (\"host\" = 'WSL-debian' AND \"customer\" = 'DevOpsea' AND \"os\" = 'Linux' AND \"environment\" = 'Dev' AND \"path\" = '/mnt/c') AND $timeFilter GROUP BY \"host\"::tag",
-                    "rawQuery": false,
-                    "refId": "B",
-                    "resultFormat": "time_series",
-                    "select": [
-                        [
-                            {
-                                "params": [
-                                    "free"
-                                ],
-                                "type": "field"
-                            }
-                        ]
-                    ],
-                    "tags": [
-                        {
-                            "key": "host",
-                            "operator": "=",
-                            "value": "WSL-debian"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "customer",
-                            "operator": "=",
-                            "value": "DevOpsea"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "os",
-                            "operator": "=",
-                            "value": "Linux"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "environment",
-                            "operator": "=",
-                            "value": "Dev"
-                        },
-                        {
-                            "condition": "AND",
-                            "key": "path",
-                            "operator": "=",
-                            "value": "/mnt/e"
+                            "value": "/"
                         }
                     ]
                 }
             ],
-            "title": "Disk",
+            "title": "Disk Free",
             "type": "timeseries"
         },
         {
